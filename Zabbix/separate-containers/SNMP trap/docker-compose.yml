@@ -1,0 +1,18 @@
+version: '3.0'
+
+networks:
+  zabbix:
+    driver:
+      bridge
+
+services:
+  zabbix-snmptraps:
+    image: zabbix/zabbix-snmptraps:6.0-ubuntu-latest
+    ports: 
+      - 162:1162/udp
+    restart: always
+    networks:
+      - zabbix
+    volumes:
+      - /docker/zabbix/snmptraps:/var/lib/zabbix/snmptraps:rw
+      - /docker/zabbix/mibs:/usr/share/snmp/mibs:ro

@@ -1,0 +1,16 @@
+version: '3.0'
+
+networks:
+  zabbix:
+    driver:
+      bridge
+
+services:  
+  zabbix-agent:
+    image: zabbix/zabbix-agent:6.0-ubuntu-latest
+    restart: always
+    links:
+      - "zabbix-server:zabbix-server"
+    privileged: true
+    networks:
+      - zabbix
