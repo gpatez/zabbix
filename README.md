@@ -18,3 +18,6 @@ The basic operating structure is dividing the application into five containers, 
 * Zabbix agent
 
 In this repository it is possible to find the docker-compose.yml files separated by container, and also a single file for the five containers, facilitating implementation and customization.
+
+## Running the containers
+To start the application, you need docker-compose installed in the environment, if you don't have it installed, consult the [official Docker documentation](https://docs.docker.com/) on how to install it.
