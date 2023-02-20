@@ -45,7 +45,7 @@ services:
   zabbix-web:
    image: zabbix/zabbix-web-nginx-mysql:6.0-ubuntu-latest
    ports: 
-    - 8084:8080
+    - 8080:8080
    restart: always
    environment:
     ZBX_SERVER_HOST: zabbix-server
